@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/*Обнуление стилей*/
+/*1) Очищаем все отступы и границы*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/*2) Меняет подсчет ширины блока для удобства верстки*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*3) Убираем линии обводки у некоторых браузеров*/
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+/*4) Делаем теги блочными*/
+nav, footer, header, aside {
+  display: block;
+}
+
+/*5) Уравнивание поведения шрифтов и элементов для разных браузеров*/
+/*+запрет самовольного увеличения шрифта на телефонах, например IPhone*/
+html, body {
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  background: #fafafa;
+  color: #252B42;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*6) Наследование семейства шрифта для этих тегов, так как по умолчанию они не наследуют*/
+input, button, textarea {
+  font-family: inherit;
+}
+
+/*7) Убирают некоторые особенности тегам в разных браузерах*/
+input:-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+}
+
+button:-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/*8) Обнуляем все заголовки h*/
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
